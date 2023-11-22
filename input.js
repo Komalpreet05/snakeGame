@@ -27,72 +27,79 @@ export function getInputDirection() {
     return inputDirection;
 }
 
+// // Your existing code for handling keyboard input
+// document.addEventListener('keydown', handleKeydown);
 
-// New code for handling touch input
-let touchStartX, touchStartY;
-document.addEventListener('touchstart', handleTouchStart);
-document.addEventListener('touchmove', handleTouchMove);
+// // New code for handling touch input
+// let touchStartX, touchStartY;
+// document.addEventListener('touchstart', handleTouchStart);
+// document.addEventListener('touchmove', handleTouchMove);
 
-function handleTouchStart(event) {
-    // Store the initial touch coordinates
-    touchStartX = event.touches[0].clientX;
-    touchStartY = event.touches[0].clientY;
-}
+// function handleKeydown(event) {
+//   // Your existing keyboard input handling logic
+//   // ...
+// }
 
-function handleTouchMove(event) {
-    if (!touchStartX || !touchStartY) {
-        return;
-    }
+// function handleTouchStart(event) {
+//   // Store the initial touch coordinates
+//   touchStartX = event.touches[0].clientX;
+//   touchStartY = event.touches[0].clientY;
+// }
 
-    // Calculate the change in coordinates
-    const touchEndX = event.touches[0].clientX;
-    const touchEndY = event.touches[0].clientY;
+// function handleTouchMove(event) {
+//   if (!touchStartX || !touchStartY) {
+//     return;
+//   }
 
-    const deltaX = touchEndX - touchStartX;
-    const deltaY = touchEndY - touchStartY;
+//   // Calculate the change in coordinates
+//   const touchEndX = event.touches[0].clientX;
+//   const touchEndY = event.touches[0].clientY;
 
-    // Determine the direction based on the change in coordinates
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-        // Horizontal swipe
-        if (deltaX > 0) {
-            // Swipe right
-            handleSwipeRight();
-        } else {
-            // Swipe left
-            handleSwipeLeft();
-        }
-    } else {
-        // Vertical swipe
-        if (deltaY > 0) {
-            // Swipe down
-            handleSwipeDown();
-        } else {
-            // Swipe up
-            handleSwipeUp();
-        }
-    }
+//   const deltaX = touchEndX - touchStartX;
+//   const deltaY = touchEndY - touchStartY;
 
-    // Reset the initial touch coordinates
-    touchStartX = null;
-    touchStartY = null;
-}
+//   // Determine the direction based on the change in coordinates
+//   if (Math.abs(deltaX) > Math.abs(deltaY)) {
+//     // Horizontal swipe
+//     if (deltaX > 0) {
+//       // Swipe right
+//       handleSwipeRight();
+//     } else {
+//       // Swipe left
+//       handleSwipeLeft();
+//     }
+//   } else {
+//     // Vertical swipe
+//     if (deltaY > 0) {
+//       // Swipe down
+//       handleSwipeDown();
+//     } else {
+//       // Swipe up
+//       handleSwipeUp();
+//     }
+//   }
 
-function handleSwipeRight() {
-    // Handle right swipe
-    // ...
-}
+//   // Reset the initial touch coordinates
+//   touchStartX = null;
+//   touchStartY = null;
+// }
 
-function handleSwipeLeft() {
-    // Handle left swipe
-    // ...
-}
+// function handleSwipeRight() {
+//   // Handle right swipe
+//   // ...
+// }
 
-function handleSwipeDown() {
-    // Handle down swipe
-    // ...
-}
+// function handleSwipeLeft() {
+//   // Handle left swipe
+//   // ...
+// }
 
-function handleSwipeUp() {
-    // Handle up swipe
-    // ...
-}
+// function handleSwipeDown() {
+//   // Handle down swipe
+//   // ...
+// }
+
+// function handleSwipeUp() {
+//   // Handle up swipe
+//   // ...
+// }
