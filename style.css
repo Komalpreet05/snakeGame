@@ -20,9 +20,11 @@ body {
 .snake {
   background-color: aqua;
   border: 0.25vmin solid black;
+  border-radius: 50%;
 }
 
 .food {
   background-color: yellow;
   border: 0.25vmin solid black;
+  border-radius: 50%;
 }
