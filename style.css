@@ -5,16 +5,21 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: black;
+  background-color: yellow;
 }
 
 #game-board {
   background-color: #ccc;
   width: 100vmin;
-  height: 100vmin;
+  height: 75vmin;
   display: grid;
   grid-template-rows: repeat(21, 1fr);
   grid-template-columns: repeat(21, 1fr);
+  /* position: absolute; */
+}
+
+.container {
+  position: relative;
 }
 
 .snake {

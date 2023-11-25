@@ -1,13 +1,17 @@
 import { getInputDirection } from "./input.js";
 
+
 export const snakeSpeed = 5; //this number is how many times snake moves per second, this case 2 times per second
 const snakeBody = [{ x: 11, y: 11 }];
 let newSegments = 0;
+export let score = 0;
+let scoreBoard = document.getElementById('score');
+export let scoreCount = 0;
 
 export function update() {
     addSegments();
     const inputDirection = getInputDirection();
-    console.log("update");
+    //console.log("update");
     for (let i = snakeBody.length - 2; i >= 0; i--) {
         snakeBody[i + 1] = { ...snakeBody[i] }
     }
@@ -28,6 +32,9 @@ export function draw(gameBoard) {
 
 export function expandSnake(amount) {
     newSegments += amount
+    score++;
+    scoreBoard.textContent = score;
+
 }
 
 export function onSnake(position, { ignoreHead = false } = {}) {

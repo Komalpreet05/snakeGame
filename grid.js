@@ -1,3 +1,4 @@
+import { getSnakeHead } from "./snake.js";
 const gridSize = 21;
 
 export function randomGridPosition() {
